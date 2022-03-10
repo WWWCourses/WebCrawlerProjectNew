@@ -11,7 +11,9 @@ def get_pub_urls(html):
 	# for tag in a_tags:
 	# 	links.append(tag['href'])
 
-	links = [tag['href'] for tag in a_tags]
+	base_url = 'https://bnr.bg'
+
+	links = [ base_url+tag['href'] for tag in a_tags]
 
 	return links
 
